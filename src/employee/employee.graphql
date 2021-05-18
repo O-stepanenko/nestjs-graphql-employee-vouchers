@@ -1,0 +1,18 @@
+type Query {
+    employees: [Employee]
+    employee(id: ID!): Employee
+    left_benefits(date: String!): [LeftBenefits]
+}
+
+type Employee {
+    id: Int
+    name: String
+    monthly_budget: Int
+    company_id: Int
+    company_title: String
+}
+
+type LeftBenefits {
+    company: String
+    employees: [Employee]
+}

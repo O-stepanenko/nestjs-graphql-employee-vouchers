@@ -1,0 +1,18 @@
+type Query {
+    vouchers: [Voucher]
+    voucher(id: ID!): Voucher
+    partner_revenue: [PartnerRevenue]
+}
+
+type Voucher {
+    id: Int
+    amount: Int
+    partner_id: Int
+    partner_name: String
+}
+
+type PartnerRevenue {
+    id: Int
+    name: String
+    total_revenue: Int
+}
